@@ -95,8 +95,18 @@ public class Ex01_array {
 		scores[3] = 83;
 		scores[4] = 76;
 		
-		// 합계(평균) , 최대값 최소값
 		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		// 합계(평균) , 최대값 최소값
+	
 		int total = 0; // Zero
 		int max = 0; //가장 작은 값을 넣어줘서 초기화 시켜야한다 
 		int min = 100; // 가장 큰 값을 넣어줘서 초기화 시켜줘야한다
@@ -176,6 +186,10 @@ public class Ex01_array {
 	public static void main(String[] args) {
 	ex07();
 
+	
+	
+	
+	
 	}
 
 }

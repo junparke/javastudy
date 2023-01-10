@@ -23,8 +23,8 @@ public class Ex03_advanced_for {
 					System.out.println(max);
 					System.out.println(min);
 			
-			
-			
+					
+					
 		}
 		public static void ex02() {
 			
