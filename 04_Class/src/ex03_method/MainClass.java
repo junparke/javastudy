@@ -22,7 +22,7 @@ public class MainClass {
 		
 		CoffeeMachine coffeeMachine = new CoffeeMachine();
 		
-		CoffeeAndChange coffeeAndChange = coffeeMachine.buyCoffee(1000, 1);
+		CoffeeAndChange coffeeAndChange = coffeeMachine.buyCoffee(500, 1);
 		System.out.println(coffeeAndChange.coffee);
 		System.out.println(coffeeAndChange.change);
 		
@@ -31,9 +31,30 @@ public class MainClass {
 		
 	}
 	
+	public static void ex03() {
+		
+		Car car = new Car();
+		
+		car.addoil(100); //기름 100
+		
+		for(int n =0; n > 51; n++) {    //액셀 50번 밟기
+			car.pushAccel();
+		}
+		System.out.println(car.oilpot);
+		System.out.println(car.carSpeed);
+		
+		for(int n = 0; n < 11; n++) {
+			car.pushBrake();				
+			
+			System.out.println(car.oilpot);
+			System.out.println(car.carSpeed);
+		}
+	}
+		
+	
 	
 	public static void main(String[] args) {
-		ex02();
+		ex03();
 	
 	}
 

@@ -4,30 +4,12 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		
-		School school = new School();
-		school.name = "철산초";
-		school.students = new Student[3];
-		
-		for(int i=0; i< school.students.length; i++) {
-			school.students[i] = new Student();
-			
-			school.students[i].name ="정숙";
-			school.students[i].stuNo ="1111";
-			
-			school.students[i].score = new Score();
-			school.students[i].score.eng = 100;
-			school.students[i].score.kor = 100;
-			school.students[i].score.math = 100;
-			
-			
-			
-		}
+
 		
 		
 		
 		
-		
-	/*
+
 		School school = new School();
 		 
 		school.name = "철산초";
@@ -56,7 +38,7 @@ public class MainClass {
 			System.out.println("수학 :"+ school.students[i].score.kor);
 			System.out.println("영어 :"+ school.students[i].score.math);
 
-			*/
+		
 		}	
 		
 
