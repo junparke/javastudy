@@ -58,21 +58,27 @@ public class Ex777 {
 	
 	
 	public static void ex03() {
-		
-		int total = 0;
-		int[] arr = {1, -1, -2, 2, 3, -3};
-		
-		for(int i =0; i < arr.length; i++) {
-			total += arr[i];
+	
+			int evenTotal = 0;  // 짝수 합
+			int oddTotal = 0;   // 홀수 합
 			
-		}
-		System.out.println(total);
+			for(int i=0; i< 101; i++) {
+				if(i % 2 == 0) {
+					oddTotal += i;
+					System.out.println(oddTotal);
+				}
+				else {
+					oddTotal += i;
+					System.out.println(oddTotal);
+				}
+			}
+			
+			
 		
+	
+	
+	
 	}
-	
-	
-	
-	
 	public static void main(String[] args) {
 		ex03();
 		

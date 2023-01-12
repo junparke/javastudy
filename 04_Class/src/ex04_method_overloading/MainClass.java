@@ -17,17 +17,12 @@ public class MainClass {
 		
 		
 		
-		
-		
 		//addition(double[] numbers) 호출
 		double []arr = {1.1, 2.2, 3.3};
 		double result2 = calc.addition(arr);
 		System.out.println(result2);
 		
-		
-		
-		
-		
+
 		
 		
 	}

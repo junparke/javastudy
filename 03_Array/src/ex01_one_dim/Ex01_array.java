@@ -98,13 +98,6 @@ public class Ex01_array {
 		
 
 		
-		
-		
-		
-		
-		
-		
-		
 		// 합계(평균) , 최대값 최소값
 	
 		int total = 0; // Zero
