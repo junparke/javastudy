@@ -74,14 +74,10 @@ public class MainClass {
 		int end = 6;
 		int total = 0;
 		
-		double[]arr= {1, 2, 3, 4, 5, 6};
-		double sum = 0.0;
-		
-		 for (double num : arr) {
-	            sum += num;
-	        }
-		 double sum2 = sum / arr.length;
-		 System.out.println("1부터 6사이의 모든 정수의 평균은 "+sum2+ " 입니다");
+		for(int n= begin; n <= end; n++ ) {
+			total += n;
+		}
+		 System.out.println(begin + "부터" + end + " 사이 모든 정수의 평균은" + total/(end-begin+1.0)+"입니다.");
 			
 			
 			
@@ -102,9 +98,9 @@ public class MainClass {
 		int evenTotal = 0;  // 짝수 합
 		int oddTotal = 0;   // 홀수 합
 		
-		for(int i = 0; i < 101; i++) {
+		for(int i = 1; i < 101; i++) {
 			if(i % 2 == 0) {
-				oddTotal += i;
+				evenTotal += i;
 				System.out.println("짝수의 합은 "+ oddTotal + "입니다.");
 			}
 			else {
@@ -128,7 +124,7 @@ public class MainClass {
 		
 		for(int i =0; i < arr.length; i++) {
 			if(arr[i] < 0) {
-				arr[i] = 0;
+				arr[i] = 0; //continue
 		}
 				total += arr[i];
 		}
@@ -145,9 +141,12 @@ public class MainClass {
 		int count = 0;
 		
 		for(int i = 0; i< characters.length ; i++) {
+			if (ch == characters[i]) {
+				count++; //갯수 조건 0부터 세기 
+			}
 			
 		}
-		
+		System.out.println("배열에 포함된"+ ch + "는 " + count + "개입니다.");
 		
 		
 	}
@@ -160,9 +159,42 @@ public class MainClass {
 	// 예시
 	// 행주도마
 	public static void q8() {
-		int strScore = 100;
+		/*
+		String strScore = "75";
 		
-		switch(strScore / 10) {
+		int score = Integer.parseInt(strScore);
+		
+		String result = "";
+		if(score >= 60) {
+			result += "행주";
+		}
+		if(score >= 70) {
+			result += "도마";
+		}
+		*/
+		
+		
+String strScore = "75";
+		
+		int score = Integer.parseInt(strScore);
+		
+		String result = "";
+		switch (score / 10) {
+		case 10: 
+		case 9: result += "냄비";
+		case 8: result += "식칼";
+		case 7: result += "도마";
+		case 6: result += "행주";
+		
+		}
+		System.out.println(result);
+	
+		
+		
+		
+		
+		/*
+		switch(score / 10) {
 		
 		case 0: case 1: case 2: case 4: 
 			
@@ -176,14 +208,14 @@ public class MainClass {
 		
 		default:System.out.println("행주" + " 도마" + " 식칼 " + " 냄비");
 			
-			
+			*/
 			
 			
 		}
 		
 		
 		
-	}
+	
 	
 	// 문제9. 1 ~ 100 사이의 정수를 대상으로 369 게임 결과를 아래와 같이 출력하시오.
 	// 예시
@@ -198,6 +230,27 @@ public class MainClass {
 		boolean condition1 = false;  // 일의 자리가 3의 배수인가?
 		boolean condition2 = false;  // 십의 자리가 3의 배수인가?
 	
+	for(int n=1; n <= 100; n++) {
+		int one = n % 10; 
+		condition1 = one % 3 == 0 && one != 0;
+		int ten = n/10;
+		condition2 =ten % 3 == 0 && ten !=0;
+		if(condition1 && condition2) {
+			System.out.println("짝짝"+ "\t");
+		}else if (condition1 || condition2) {
+			System.out.println("짝" + "\t");
+		}else {
+			System.out.println();
+		}
+		if(n % 10 == 0) {
+			System.out.println();
+		}
+	}
+		
+		
+		
+		
+		/*
 				int x = 1;
 				while (x <= 100) {
 					int a = x / 10;
@@ -222,7 +275,7 @@ public class MainClass {
 						
 						x=x+1;
 				}
-		   
+		   */
 	   
 	
 	}
@@ -240,12 +293,15 @@ public class MainClass {
 		int[] scores = {50, 60, 90, 80, 70};
 		
 		int max =scores[0];
-		for(int i = 0; i < scores.length; i++) {
-			if(scores[i]>max) {
-				max = scores[i];				
+		int maxNo = 0; //사람 번호 
+		for(int i = 1; i < scores.length; i++) {
+			if(scores[i]<max) {
+				max = scores[i];
+				maxNo = scores[i];
+				maxNo = i;
 			}
 		}
-		System.out.println("가장 높은"+ max + "점수를 받은 사람은 " + names[2]);		
+		System.out.println("가장 높은 점수를 받은 사람은 " + names[maxNo]);		
 	}
 	
 	// main 메소드는 그대로 사용합니다.

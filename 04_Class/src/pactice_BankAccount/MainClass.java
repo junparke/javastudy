@@ -1,4 +1,4 @@
-package pactice;
+package pactice_BankAccount;
 
 public class MainClass {
 
