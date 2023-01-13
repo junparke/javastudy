@@ -10,7 +10,7 @@ public class Home {
 	
 	//생성자 
 	
-	public Home(int count) {
+	public Home(int count) {   
 		arr = new Person[count];
 		this.count = count;
 		
