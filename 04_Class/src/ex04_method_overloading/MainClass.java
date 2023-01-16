@@ -22,8 +22,7 @@ public class MainClass {
 		double result2 = calc.addition(arr);
 		System.out.println(result2);
 		
-
-		
+	
 		
 	}
 	

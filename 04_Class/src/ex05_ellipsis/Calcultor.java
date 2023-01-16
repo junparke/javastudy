@@ -21,6 +21,8 @@ public class Calcultor {
 		return total;
 	}
 	
+	
+	
 
 	
 }
